@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Zipangu.iml" filepath="$PROJECT_DIR$/Zipangu.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sample/sample.iml" filepath="$PROJECT_DIR$/sample/sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javasample/javasample.iml" filepath="$PROJECT_DIR$/javasample/javasample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlinSample/kotlinSample.iml" filepath="$PROJECT_DIR$/kotlinSample/kotlinSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/zipangu/zipangu.iml" filepath="$PROJECT_DIR$/zipangu/zipangu.iml" />
     </modules>
   </component>

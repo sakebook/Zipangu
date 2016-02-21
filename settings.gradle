@@ -1,1 +1,1 @@
-include ':sample', ':zipangu'
+include ':kotlinSample', ':zipangu', ':javasample'
