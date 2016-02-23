@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Zipangu.begining(this)
+        Zipangu.beginning(this)
 
 
 

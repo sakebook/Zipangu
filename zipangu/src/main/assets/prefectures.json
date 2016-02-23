@@ -1,10 +1,16 @@
 [
   {
-    "name": "北海道",
-    "stateCode": 1
+    "stateName": "北海道",
+    "kana": "hokkaido",
+    "stateCode": 1,
+    "areaName": "北海道・東北",
+    "areaCode": 1
   },
   {
-    "name": "青森",
-    "stateCode": 2
+    "stateName": "青森県",
+    "kana": "aomori",
+    "stateCode": 2,
+    "areaName": "北海道・東北",
+    "areaCode": 1
   }
 ]
