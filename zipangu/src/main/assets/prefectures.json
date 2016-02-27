@@ -2,15 +2,36 @@
   {
     "stateName": "北海道",
     "kana": "hokkaido",
-    "stateCode": 1,
-    "areaName": "北海道・東北",
-    "areaCode": 1
+    "stateCode": 1
   },
   {
     "stateName": "青森県",
     "kana": "aomori",
-    "stateCode": 2,
-    "areaName": "北海道・東北",
-    "areaCode": 1
+    "stateCode": 2
+  },
+  {
+    "stateName": "岩手県",
+    "kana": "iwate",
+    "stateCode": 3
+  },
+  {
+    "stateName": "宮城県",
+    "kana": "miyagi",
+    "stateCode": 4
+  },
+  {
+    "stateName": "秋田県",
+    "kana": "akita",
+    "stateCode": 5
+  },
+  {
+    "stateName": "山形県",
+    "kana": "yanagata",
+    "stateCode": 6
+  },
+  {
+    "stateName": "福島県",
+    "kana": "fukushima",
+    "stateCode": 7
   }
 ]

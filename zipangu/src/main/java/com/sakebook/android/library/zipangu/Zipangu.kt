@@ -21,11 +21,11 @@ object Zipangu {
             Log.d("Zipangu", "Already beginning")
             return
         }
-        val jsonStr = ResourceAccess.getResource(context)
+        val jsonStr = ResourceAccess.getResource(context, "prefectures.json")
         val jsonArray = JSONArray(jsonStr)
         for (i in 0..jsonArray.length() - 1) {
             val obj = jsonArray.getJSONObject(i)
-            mutablePrefectures.add(Prefecture(obj.getInt("stateCode"), obj.getString("stateName"), obj.getString("kana"), obj.getString("areaName"), obj.getInt("areaCode")))
+            mutablePrefectures.add(Prefecture(stateCode = obj.getInt("stateCode"), stateName = obj.getString("stateName"), kana = obj.getString("kana")))
         }
         Log.d("Zipangu", "json length: " + jsonArray.length())
         Log.d("Zipangu", "list length: " + mutablePrefectures.size)
@@ -43,5 +43,16 @@ object Zipangu {
         Log.d("Zipangu", "with: " + prefectures.size);
         return prefectures.filter { it.stateName == stateName }.first()
     }
+
+    @JvmStatic fun east(): List<Prefecture> {
+        Log.d("Zipangu", "east: " + prefectures.size);
+        return prefectures.filter { it.east == true }
+    }
+
+    @JvmStatic fun west(): List<Prefecture> {
+        Log.d("Zipangu", "west: " + prefectures.size);
+        return prefectures.filter { it.west == true }
+    }
+
 
 }

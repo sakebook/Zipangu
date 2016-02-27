@@ -8,8 +8,8 @@ import android.content.Context
 class ResourceAccess {
 
     companion object {
-        fun getResource(context: Context): String {
-            return context.assets.open("prefectures.json").reader(charset=Charsets.UTF_8).use{it.readText()}
+        fun getResource(context: Context, name: String): String {
+            return context.assets.open(name).reader(charset=Charsets.UTF_8).use{it.readText()}
         }
     }
 
