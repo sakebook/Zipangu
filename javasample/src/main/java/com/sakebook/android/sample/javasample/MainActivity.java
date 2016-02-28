@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Zipangu.beginning(this, new Prefecture(0, "カスタム県", "カスタムエリア", Segment.None));
-        Zipangu.beginning(this);
         Log.d("java", Zipangu.code(100).getName());
         Log.d("java", Zipangu.name("青").getName());
         Log.d("java", Zipangu.segment(Segment.West).toString());

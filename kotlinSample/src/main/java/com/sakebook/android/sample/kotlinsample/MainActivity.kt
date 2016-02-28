@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         Zipangu.beginning(this)
-        Zipangu.beginning(this)
         Log.d("kotlin", Zipangu.code(1).name)
         Log.d("kotlin", Zipangu.code(100).name) // return default prefecture
         Log.d("kotlin", Zipangu.name("北海道").toString())
