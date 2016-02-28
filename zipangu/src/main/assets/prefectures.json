@@ -1,37 +1,284 @@
 [
   {
-    "stateName": "北海道",
-    "kana": "hokkaido",
-    "stateCode": 1
+    "name": "北海道",
+    "code": 1,
+    "area": "北海道",
+    "segment": "East"
   },
   {
-    "stateName": "青森県",
-    "kana": "aomori",
-    "stateCode": 2
+    "name": "青森県",
+    "code": 2,
+    "area": "東北",
+    "segment": "East"
   },
   {
-    "stateName": "岩手県",
-    "kana": "iwate",
-    "stateCode": 3
+    "name": "岩手県",
+    "code": 3,
+    "area": "東北",
+    "segment": "East"
   },
   {
-    "stateName": "宮城県",
-    "kana": "miyagi",
-    "stateCode": 4
+    "name": "宮城県",
+    "code": 4,
+    "area": "東北",
+    "segment": "East"
   },
   {
-    "stateName": "秋田県",
-    "kana": "akita",
-    "stateCode": 5
+    "name": "秋田県",
+    "code": 5,
+    "area": "東北",
+    "segment": "East"
   },
   {
-    "stateName": "山形県",
-    "kana": "yanagata",
-    "stateCode": 6
+    "name": "山形県",
+    "code": 6,
+    "area": "東北",
+    "segment": "East"
   },
   {
-    "stateName": "福島県",
-    "kana": "fukushima",
-    "stateCode": 7
+    "name": "福島県",
+    "code": 7,
+    "area": "東北",
+    "segment": "East"
+  },
+  {
+    "name": "茨城県",
+    "code": 8,
+    "area": "関東",
+    "segment": "East"
+  },
+  {
+    "name": "栃木県",
+    "code": 9,
+    "area": "関東",
+    "segment": "East"
+  },
+  {
+    "name": "群馬県",
+    "code": 10,
+    "area": "関東",
+    "segment": "East"
+  },
+  {
+    "name": "埼玉県",
+    "code": 11,
+    "area": "関東",
+    "segment": "East"
+  },
+  {
+    "name": "千葉県",
+    "code": 12,
+    "area": "関東",
+    "segment": "East"
+  },
+  {
+    "name": "東京都",
+    "code": 13,
+    "area": "関東",
+    "segment": "East"
+  },
+  {
+    "name": "神奈川県",
+    "code": 14,
+    "area": "関東",
+    "segment": "East"
+  },
+  {
+    "name": "新潟県",
+    "code": 15,
+    "area": "中部",
+    "segment": "East"
+  },
+  {
+    "name": "富山県",
+    "code": 16,
+    "area": "中部",
+    "segment": "West"
+  },
+  {
+    "name": "石川県",
+    "code": 17,
+    "area": "中部",
+    "segment": "West"
+  },
+  {
+    "name": "福井県",
+    "code": 18,
+    "area": "中部",
+    "segment": "West"
+  },
+  {
+    "name": "山梨県",
+    "code": 19,
+    "area": "中部",
+    "segment": "East"
+  },
+  {
+    "name": "長野県",
+    "code": 20,
+    "area": "中部",
+    "segment": "East"
+  },
+  {
+    "name": "岐阜県",
+    "code": 21,
+    "area": "中部",
+    "segment": "West"
+  },
+  {
+    "name": "静岡県",
+    "code": 22,
+    "area": "中部",
+    "segment": "East"
+  },
+  {
+    "name": "愛知県",
+    "code": 23,
+    "area": "中部",
+    "segment": "West"
+  },
+  {
+    "name": "三重県",
+    "code": 24,
+    "area": "近畿",
+    "segment": "West"
+  },
+  {
+    "name": "滋賀県",
+    "code": 25,
+    "area": "近畿",
+    "segment": "West"
+  },
+  {
+    "name": "京都府",
+    "code": 26,
+    "area": "近畿",
+    "segment": "West"
+  },
+  {
+    "name": "大阪府",
+    "code": 27,
+    "area": "近畿",
+    "segment": "West"
+  },
+  {
+    "name": "兵庫県",
+    "code": 28,
+    "area": "近畿",
+    "segment": "West"
+  },
+  {
+    "name": "奈良県",
+    "code": 29,
+    "area": "近畿",
+    "segment": "West"
+  },
+  {
+    "name": "和歌山県",
+    "code": 30,
+    "area": "近畿",
+    "segment": "West"
+  },
+  {
+    "name": "鳥取県",
+    "code": 31,
+    "area": "中国",
+    "segment": "West"
+  },
+  {
+    "name": "島根県",
+    "code": 32,
+    "area": "中国",
+    "segment": "West"
+  },
+  {
+    "name": "岡山県",
+    "code": 33,
+    "area": "中国",
+    "segment": "West"
+  },
+  {
+    "name": "広島県",
+    "code": 34,
+    "area": "中国",
+    "segment": "West"
+  },
+  {
+    "name": "山口県",
+    "code": 35,
+    "area": "中国",
+    "segment": "West"
+  },
+  {
+    "name": "徳島県",
+    "code": 36,
+    "area": "四国",
+    "segment": "West"
+  },
+  {
+    "name": "香川県",
+    "code": 37,
+    "area": "四国",
+    "segment": "West"
+  },
+  {
+    "name": "愛媛県",
+    "code": 38,
+    "area": "四国",
+    "segment": "West"
+  },
+  {
+    "name": "高知県",
+    "code": 39,
+    "area": "四国",
+    "segment": "West"
+  },
+  {
+    "name": "福岡県",
+    "code": 40,
+    "area": "九州",
+    "segment": "West"
+  },
+  {
+    "name": "佐賀県",
+    "code": 41,
+    "area": "九州",
+    "segment": "West"
+  },
+  {
+    "name": "長崎県",
+    "code": 42,
+    "area": "九州",
+    "segment": "West"
+  },
+  {
+    "name": "熊本県",
+    "code": 43,
+    "area": "九州",
+    "segment": "West"
+  },
+  {
+    "name": "大分県",
+    "code": 44,
+    "area": "九州",
+    "segment": "West"
+  },
+  {
+    "name": "宮崎県",
+    "code": 45,
+    "area": "九州",
+    "segment": "West"
+  },
+  {
+    "name": "鹿児島県",
+    "code": 46,
+    "area": "九州",
+    "segment": "West"
+  },
+  {
+    "name": "沖縄県",
+    "code": 47,
+    "area": "九州",
+    "segment": "West"
   }
 ]

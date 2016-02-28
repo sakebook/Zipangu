@@ -10,8 +10,8 @@ import org.json.JSONArray
 
 object Zipangu {
 
-    var mutablePrefectures: MutableList<Prefecture> = arrayListOf()
-    val prefectures: List<Prefecture> by lazy { mutablePrefectures }
+    private var mutablePrefectures: MutableList<Prefecture> = arrayListOf()
+    private val prefectures: List<Prefecture> by lazy { mutablePrefectures }
 
     /**
      * Initialize.
@@ -21,38 +21,49 @@ object Zipangu {
             Log.d("Zipangu", "Already beginning")
             return
         }
-        val jsonStr = ResourceAccess.getResource(context, "prefectures.json")
-        val jsonArray = JSONArray(jsonStr)
+        val prefecturesJsonStr = ResourceAccess.getResource(context, "prefectures.json")
+        val jsonArray = JSONArray(prefecturesJsonStr)
+
         for (i in 0..jsonArray.length() - 1) {
             val obj = jsonArray.getJSONObject(i)
-            mutablePrefectures.add(Prefecture(stateCode = obj.getInt("stateCode"), stateName = obj.getString("stateName"), kana = obj.getString("kana")))
+            mutablePrefectures.add(Prefecture(
+                    code = obj.getInt("code"),
+                    name = obj.getString("name"),
+                    area = obj.getString("area"),
+                    segment = when (obj.optString("segment")) {
+                        Segment.East.name -> Segment.East
+                        Segment.West.name -> Segment.West
+                        else -> throw Throwable()
+                    }
+            ))
         }
-        Log.d("Zipangu", "json length: " + jsonArray.length())
-        Log.d("Zipangu", "list length: " + mutablePrefectures.size)
     }
 
     /**
      * statecode return Prefecture
      * */
-    @JvmStatic fun with(stateCode: Int): Prefecture {
+    @JvmStatic fun with(code: Int): Prefecture {
         Log.d("Zipangu", "with: " + prefectures.size);
-        return prefectures.filter { it.stateCode == stateCode }.first()
+        return prefectures.filter { it.code == code }.first()
     }
 
-    @JvmStatic fun with(stateName: String): Prefecture {
+    @JvmStatic fun with(name: String): Prefecture {
         Log.d("Zipangu", "with: " + prefectures.size);
-        return prefectures.filter { it.stateName == stateName }.first()
+        return prefectures.filter { it.name == name }.first()
     }
 
     @JvmStatic fun east(): List<Prefecture> {
         Log.d("Zipangu", "east: " + prefectures.size);
-        return prefectures.filter { it.east == true }
+        return prefectures.filter { it.segment == Segment.East }
     }
 
     @JvmStatic fun west(): List<Prefecture> {
         Log.d("Zipangu", "west: " + prefectures.size);
-        return prefectures.filter { it.west == true }
+        return prefectures.filter { it.segment == Segment.West }
     }
 
-
+    @JvmStatic fun area(area: Area): List<Prefecture> {
+        Log.d("Zipangu", "area: " + area.name);
+        return prefectures.filter { it.area == area.name }
+    }
 }
