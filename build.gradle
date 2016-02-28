@@ -21,3 +21,8 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+afterEvaluate {
+    tasks.findByPath(":zipangu:androidJavadocs").enabled = false
+}
+
