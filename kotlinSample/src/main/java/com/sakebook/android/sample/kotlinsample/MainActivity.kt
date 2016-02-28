@@ -1,4 +1,4 @@
-package com.sakebook.android.sample.zipangusample
+package com.sakebook.android.sample.kotlinsample
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

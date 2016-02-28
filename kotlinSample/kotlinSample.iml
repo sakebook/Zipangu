@@ -91,7 +91,6 @@
     <orderEntry type="library" exported="" name="kotlin-stdlib-1.0.0" level="project" />
     <orderEntry type="library" exported="" name="support-vector-drawable-23.2.0" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-23.2.0" level="project" />
-    <orderEntry type="library" exported="" name="rxjava-1.1.1" level="project" />
     <orderEntry type="module" module-name="zipangu" exported="" />
   </component>
 </module>

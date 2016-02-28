@@ -1,4 +1,4 @@
-package com.sakebook.android.sample.zipangusample
+package com.sakebook.android.sample.kotlinsample
 
 import android.app.Application
 import android.test.ApplicationTestCase
