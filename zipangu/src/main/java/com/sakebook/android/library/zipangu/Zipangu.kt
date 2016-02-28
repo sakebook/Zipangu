@@ -10,15 +10,28 @@ import org.json.JSONArray
 
 object Zipangu {
 
+    private val TAG = "Zipangu"
     private var mutablePrefectures: MutableList<Prefecture> = arrayListOf()
     private val prefectures: List<Prefecture> by lazy { mutablePrefectures }
+    private var dummyPrefecture: Prefecture = Prefecture(0, "県外", "県外", Segment.None)
+
+    /**
+     * Initialize with custom dummy prefecture.
+     * @param context
+     * @param defaultPrefecture default prefecture
+     * */
+    @JvmStatic fun beginning(context: Context, defaultPrefecture: Prefecture) {
+        dummyPrefecture = defaultPrefecture
+        beginning(context)
+    }
 
     /**
      * Initialize.
+     * @param context
      * */
     @JvmStatic fun beginning(context: Context) {
         if (mutablePrefectures.size != 0) {
-            Log.d("Zipangu", "Already beginning")
+            Log.i(TAG, "Already beginning")
             return
         }
         val prefecturesJsonStr = ResourceAccess.getResource(context, "prefectures.json")
@@ -40,30 +53,44 @@ object Zipangu {
     }
 
     /**
-     * statecode return Prefecture
+     * Get Prefecture with code
+     * @param code
+     * @return Prefecture
      * */
-    @JvmStatic fun with(code: Int): Prefecture {
-        Log.d("Zipangu", "with: " + prefectures.size);
-        return prefectures.filter { it.code == code }.first()
+    @JvmStatic fun code(code: Int): Prefecture {
+        return prefectures.filter { it.code == code }.firstOrNull()?: {
+            Log.w(TAG, "code range is 1 to 47. current $code")
+            dummyPrefecture
+        }()
     }
 
-    @JvmStatic fun with(name: String): Prefecture {
-        Log.d("Zipangu", "with: " + prefectures.size);
-        return prefectures.filter { it.name == name }.first()
+    /**
+     * Get Prefecture with name
+     * @param name
+     * @return Prefecture
+     * */
+    @JvmStatic fun name(name: String): Prefecture {
+        return prefectures.filter { it.name == name }.firstOrNull()?: {
+            Log.w(TAG, "$name is not exist.")
+            dummyPrefecture
+        }()
     }
 
-    @JvmStatic fun east(): List<Prefecture> {
-        Log.d("Zipangu", "east: " + prefectures.size);
-        return prefectures.filter { it.segment == Segment.East }
+    /**
+     * Get Prefectures with Segment
+     * @param segment
+     * @return List<Prefecture>
+     * */
+    @JvmStatic fun segment(segment: Segment): List<Prefecture> {
+        return prefectures.filter { it.segment == segment }
     }
 
-    @JvmStatic fun west(): List<Prefecture> {
-        Log.d("Zipangu", "west: " + prefectures.size);
-        return prefectures.filter { it.segment == Segment.West }
-    }
-
+    /**
+     * Get Prefectures with Area
+     * @param area
+     * @return List<Prefecture>
+     * */
     @JvmStatic fun area(area: Area): List<Prefecture> {
-        Log.d("Zipangu", "area: " + area.name);
         return prefectures.filter { it.area == area.name }
     }
 }
