@@ -93,4 +93,13 @@ object Zipangu {
     @JvmStatic fun area(area: Area): List<Prefecture> {
         return prefectures.filter { it.area == area.name }
     }
+
+    /**
+     * Get all Prefectures
+     * @return List<Prefecture>
+     * */
+    @JvmStatic fun all(): List<Prefecture> {
+        return prefectures
+    }
+
 }
