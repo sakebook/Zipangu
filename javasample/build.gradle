@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 23
@@ -17,6 +18,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
 }
 
 dependencies {
@@ -24,4 +28,22 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.0'
     compile project(':zipangu')
+//    compile(name: 'zipangu-release', ext: 'aar')
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}
+buildscript {
+    ext.kotlin_version = '1.0.0'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    mavenCentral()
 }
