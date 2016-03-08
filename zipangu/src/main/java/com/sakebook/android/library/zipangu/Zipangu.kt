@@ -44,8 +44,10 @@ object Zipangu {
                     name = obj.getString("name"),
                     area = obj.getString("area"),
                     segment = when (obj.optString("segment")) {
+                        Segment.North.name -> Segment.North
                         Segment.East.name -> Segment.East
                         Segment.West.name -> Segment.West
+                        Segment.Okinawa.name -> Segment.Okinawa
                         else -> throw Throwable()
                     }
             ))

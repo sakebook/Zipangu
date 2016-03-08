@@ -3,43 +3,43 @@
     "name": "北海道",
     "code": 1,
     "area": "北海道",
-    "segment": "East"
+    "segment": "North"
   },
   {
     "name": "青森県",
     "code": 2,
     "area": "東北",
-    "segment": "East"
+    "segment": "North"
   },
   {
     "name": "岩手県",
     "code": 3,
     "area": "東北",
-    "segment": "East"
+    "segment": "North"
   },
   {
     "name": "宮城県",
     "code": 4,
     "area": "東北",
-    "segment": "East"
+    "segment": "North"
   },
   {
     "name": "秋田県",
     "code": 5,
     "area": "東北",
-    "segment": "East"
+    "segment": "North"
   },
   {
     "name": "山形県",
     "code": 6,
     "area": "東北",
-    "segment": "East"
+    "segment": "North"
   },
   {
     "name": "福島県",
     "code": 7,
     "area": "東北",
-    "segment": "East"
+    "segment": "North"
   },
   {
     "name": "茨城県",
@@ -93,19 +93,19 @@
     "name": "富山県",
     "code": 16,
     "area": "中部",
-    "segment": "West"
+    "segment": "East"
   },
   {
     "name": "石川県",
     "code": 17,
     "area": "中部",
-    "segment": "West"
+    "segment": "East"
   },
   {
     "name": "福井県",
     "code": 18,
     "area": "中部",
-    "segment": "West"
+    "segment": "East"
   },
   {
     "name": "山梨県",
@@ -123,7 +123,7 @@
     "name": "岐阜県",
     "code": 21,
     "area": "中部",
-    "segment": "West"
+    "segment": "East"
   },
   {
     "name": "静岡県",
@@ -135,13 +135,13 @@
     "name": "愛知県",
     "code": 23,
     "area": "中部",
-    "segment": "West"
+    "segment": "East"
   },
   {
     "name": "三重県",
     "code": 24,
     "area": "近畿",
-    "segment": "West"
+    "segment": "East"
   },
   {
     "name": "滋賀県",
@@ -279,6 +279,6 @@
     "name": "沖縄県",
     "code": 47,
     "area": "九州",
-    "segment": "West"
+    "segment": "Okinawa"
   }
 ]
